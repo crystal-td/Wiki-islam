@@ -1,0 +1,789 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"5ad59a95e8",applicationID:"190660362"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<title>WikiIslam - the online resource on Islam</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"9db9f326fea331440adb3469","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Main_Page","wgTitle":"Main Page","wgCurRevisionId":135208,"wgRevisionId":135208,"wgArticleId":14804,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Main_Page","wgRelevantArticleId":14804,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":["sysop"],"wgRestrictionMove":["sysop"],"wgIsMainPage":!0,"wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":3
+,"quality":2,"pristine":4},"depth":{"levels":3,"quality":1,"pristine":4},"style":{"levels":3,"quality":1,"pristine":4}}},"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!1,"nearby":!1,"watchlist":!1,"tagline":!1},"wgEditSubmitButtonLabelPublish":!1};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.NoTitle":"ready","skins.vector.styles.legacy":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","skins.vector.legacy.js","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=ext.NoTitle%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0"/>
+<meta name="description" content="WikiIslam aims to provide accurate and accessible information from traditional and critical perspectives on the beliefs, practices, and development of Islam."/>
+<meta name="keywords" content="Islam, Hadith, Skepticism, Allah, Quran"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="WikiIslam (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//wikiislam.net/api.php?action=rsd"/>
+<link rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="WikiIslam Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<meta property="og:title" content="WikiIslam - the online resource on Islam"/>
+<meta property="og:site_name" content="WikiIslam"/>
+<meta property="og:url" content="https://wikiislam.net/wiki/Main_Page"/>
+<meta property="og:description" content="WikiIslam aims to provide accurate and accessible information from traditional and critical perspectives on the beliefs, practices, and development of Islam."/>
+<meta property="og:image" content="https://wikiislam.net/wiki/images/a/a0/Logo.square.wordmark.png?version=d6375ea3ce941fca2394ed9e74159595"/>
+<meta property="og:image:width" content="310"/>
+<meta property="og:image:height" content="310"/>
+<meta property="og:image:alt" content="WikiIslam Logo"/>
+<meta property="article:tag" content="Islam, Hadith, Skepticism, Allah, Quran"/>
+<meta property="article:modified_time" content="2022-04-12T11:37:50Z"/>
+<meta property="article:published_time" content="2022-04-12T11:37:50Z"/>
+<meta property="twitter:title" content="WikiIslam - the online resource on Islam"/>
+<meta property="twitter:description" content="WikiIslam aims to provide accurate and accessible information from traditional and critical perspectives on the beliefs, practices, and development of Islam."/>
+<meta property="twitter:image" content="https://wikiislam.net/wiki/images/a/a0/Logo.square.wordmark.png?version=d6375ea3ce941fca2394ed9e74159595"/>
+<meta property="twitter:image:alt" content="WikiIslam Logo"/>
+<meta property="twitter:card" content="summary_large_image"/>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"article","name":"WikiIslam - the online resource on Islam","headline":"WikiIslam - the online resource on Islam","mainEntityOfPage":"<span style=\"position: absolute; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px);\">Main Page<\/span>","identifier":"https:\/\/wikiislam.net\/wiki\/Main_Page","url":"https:\/\/wikiislam.net\/wiki\/Main_Page","description":"WikiIslam aims to provide accurate and accessible information from traditional and critical perspectives on the beliefs, practices, and development of Islam.","keywords":"Islam, Hadith, Skepticism, Allah, Quran","dateModified":"2022-04-12T11:37:50Z","datePublished":"2022-04-12T11:37:50Z","image":{"@type":"ImageObject","url":"https:\/\/wikiislam.net\/wiki\/images\/a\/a0\/Logo.square.wordmark.png?version=d6375ea3ce941fca2394ed9e74159595","width":310,"height":310},"author":{"@type":"Organization","name":"WikiIslam","url":"\/\/wikiislam.net","logo":{"@type":"ImageObject","url":"https:\/\/wikiislam.net\/wiki\/images\/wikiislam-logo.png","caption":"WikiIslam"}},"publisher":{"@type":"Organization","name":"WikiIslam","url":"\/\/wikiislam.net","logo":{"@type":"ImageObject","url":"https:\/\/wikiislam.net\/wiki\/images\/wikiislam-logo.png","caption":"WikiIslam"}},"potentialAction":{"@type":"SearchAction","target":"https:\/\/wikiislam.net\/index.php?title=Special:Search&search={search_term}","query-input":"required name=search_term"}}</script>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Main_Page rootpage-Main_Page skin-vector action-view skin-vector-legacy minerva--history-page-action-enabled">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en"><span style="position: absolute; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px);">Main Page</span></h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From WikiIslam, the online resource on Islam</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="nomobile">
+   <div class="divTable" style="width:100%;margin-top:+.7em;background-color:#283763;border:1px solid #ccc">
+      <div class="divTableBody">
+         <div class="divTableRow">
+            <div class="divTableCell">
+               <div style="text-align:center;font-size:162%;border:none;margin: 0;padding:.1em;color:#fff">Welcome to <a href="/wiki/WikiIslam" title="WikiIslam"><span style="color:#fff; text-decoration: underline;">WikiIslam</span></a>,</div>
+               <div style="text-align:center;top:+0.2em;font-size: 95%;color:#fff;">“To provide accurate and accessible information from traditional and critical perspectives on the beliefs, practices, and development of Islam”
+</div>
+               <div id="articlecount" style="width:100%;text-align:center;font-size:95%;color:#fff;">963 articles hosted on WikiIslam</div>
+            </div>
+            <div class="divTableCell">
+               <div style="top:+0.2em;font-size: 95%">
+<ul><li><a href="/wiki/WikiIslam:Frequently_Asked_Questions" title="WikiIslam:Frequently Asked Questions"><span style="color:#fff; text-decoration: underline;">Frequently asked questions</span></a></li>
+<li><span style="color:#fff; text-decoration: underline;"><a rel="nofollow" class="external text" href="http://wikiislamica.net/"><span style="color:#fff; text-decoration: underline;">Censored? Visit our mirror site</span></a></span></li>
+<li><a href="/wiki/WikiIslam:Contribute" title="WikiIslam:Contribute"><span style="color:#fff; text-decoration: underline;">Contribute</span></a></li></ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="divTable" style="width:100%;margin-top:+.7em;background-color:#fcfcfc;border:1px solid #ccc">
+      <div class="divTableBody">
+         <div class="divTableRow">
+            <div class="divTableCell">
+               <div id="importantnote" style="width:100%;text-align:left;font-size:105%;">
+<ul><li>A number of transformative steps have been undertaken as part of an ongoing effort to ‎improve the content, professionalism, and reliability of WikiIslam..<a href="/wiki/WikiIslam:Renovations" title="WikiIslam:Renovations">read more</a></li>
+<li>Help Wanted: <a href="/wiki/WikiIslam:Contribute" title="WikiIslam:Contribute">Contribute Today</a></li></ul>
+ </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="articleSummaryColumnsWrapper">
+<div class="articleSummaryColumn">
+<div class="articleSummary">
+<div class="articleSummaryInner">
+<div class="articleSummaryStar"></div>
+<div class="articleSummaryImage"><a href="/wiki/File:Battle_of_Badr.jpg" class="image"><img alt="Battle of Badr.jpg" src="/wiki/images/thumb/5/59/Battle_of_Badr.jpg/150px-Battle_of_Badr.jpg" decoding="async" width="150" height="225" srcset="/wiki/images/thumb/5/59/Battle_of_Badr.jpg/225px-Battle_of_Badr.jpg 1.5x, /wiki/images/thumb/5/59/Battle_of_Badr.jpg/300px-Battle_of_Badr.jpg 2x" /></a></div>
+<div class="articleSummaryTitle"><span class="articleSummaryTitleInner"><a href="/wiki/Portal:_Early_Islamic_History" title="Portal: Early Islamic History">Portal: Early Islamic History</a></span></div>
+<div class="articleSummaryText">
+<p>The first centuries of the Islamic Hijri calendar, starting in the CE year 622, were the formative years of the religion. Between the first and third Islamic centuries the Qur'an was written down and codified, the prophet lived and died, the great hadith collections were gathered, the sira of the prophet was committed to writing, the great schools of Sunni jurisprudence came to be, and the theology of Islam attained its familiar form. These years thus can be said to cover the formation of the religion of Islam as we know it today.
+</p>
+<div class="articleSummaryExtendedDescription">
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Sections</b></div>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Portal:_Early_Islamic_History#Career_of_the_Prophet" title="Portal: Early Islamic History">Career of the Prophet</a></li>
+<li><a href="/wiki/Portal:_Early_Islamic_History#The_Early_Caliphates" title="Portal: Early Islamic History">The Early Caliphates</a></li>
+<li><a href="/wiki/Portal:_Early_Islamic_History#The_Formation_of_the_Qur.27an_and_Classical_Arabic" title="Portal: Early Islamic History">The Formation of the Qur'an and Classical Arabic</a></li></ul>
+</div>
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Popular Articles</b></div><div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Dihya_the_Berber_Queen_(Al-Kaahina)" title="Dihya the Berber Queen (Al-Kaahina)">Dihya the Berber Queen (Al-Kaahina)</a></li>
+<li><a href="/wiki/Battle_of_Badr" title="Battle of Badr">Battle of Badr</a></li>
+<li><a href="/wiki/List_of_expeditions_of_Muhammad" title="List of expeditions of Muhammad">List of expeditions of Muhammad</a></li>
+<li><a href="/wiki/The_Massacre_of_the_Banu_Qurayza" class="mw-redirect" title="The Massacre of the Banu Qurayza">The Massacre of the Banu Qurayza</a></li></ul>
+</div></div>
+</div>
+<div class="articleSummaryEnding"></div>
+</div>
+</div>
+<div class="articleSummary">
+<div class="articleSummaryInner">
+<div class="articleSummaryStar"></div>
+<div class="articleSummaryImage"><a href="/wiki/File:Daughters_of_Hubal.jpg" class="image"><img alt="Daughters of Hubal.jpg" src="/wiki/images/thumb/5/5e/Daughters_of_Hubal.jpg/150px-Daughters_of_Hubal.jpg" decoding="async" width="150" height="227" srcset="/wiki/images/thumb/5/5e/Daughters_of_Hubal.jpg/225px-Daughters_of_Hubal.jpg 1.5x, /wiki/images/thumb/5/5e/Daughters_of_Hubal.jpg/300px-Daughters_of_Hubal.jpg 2x" /></a></div>
+<div class="articleSummaryTitle"><span class="articleSummaryTitleInner"><a href="/wiki/Portal:_Origins_of_Islam" title="Portal: Origins of Islam">Portal: Origins of Islam</a></span></div>
+<div class="articleSummaryText">
+<p>Islam arose in 7th century Arabia, and as such its appearance bears the markings of its ancient Arab and Near East milieu.
+</p>
+<div class="articleSummaryExtendedDescription">
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Sections</b></div>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Portal:_Origins_of_Islam#Arab_Paganism" title="Portal: Origins of Islam">Arab Paganism</a></li>
+<li><a href="/wiki/Portal:_Origins_of_Islam#The_Formation_of_the_Qur.27an_and_Classical_Arabic" title="Portal: Origins of Islam">The Formation of the Qur'an and Classical Arabic</a></li>
+<li><a href="/wiki/Portal:_Origins_of_Islam#Ancient_Arabian_Culture" title="Portal: Origins of Islam">Ancient Arabian Culture</a></li></ul>
+</div>
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Popular Articles</b></div><div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Textual_History_of_the_Qur%27an" title="Textual History of the Qur&#39;an">Textual History of the Qur'an</a></li>
+<li><a href="/wiki/Sana%27a_Manuscript" title="Sana&#39;a Manuscript">Sana'a Manuscript</a></li>
+<li><a href="/wiki/Pagan_Origins_of_Islam" title="Pagan Origins of Islam">Pagan Origins of Islam</a></li>
+<li><a href="/wiki/Black_Stone" title="Black Stone">Black Stone</a></li></ul>
+</div></div>
+</div>
+<div class="articleSummaryEnding"></div>
+</div>
+</div>
+<div class="articleSummary">
+<div class="articleSummaryInner">
+<div class="articleSummaryStar"></div>
+<div class="articleSummaryImage"><a href="/wiki/File:Islamic_Tradition.jpg" class="image"><img alt="Islamic Tradition.jpg" src="/wiki/images/thumb/9/98/Islamic_Tradition.jpg/150px-Islamic_Tradition.jpg" decoding="async" width="150" height="70" srcset="/wiki/images/thumb/9/98/Islamic_Tradition.jpg/225px-Islamic_Tradition.jpg 1.5x, /wiki/images/thumb/9/98/Islamic_Tradition.jpg/300px-Islamic_Tradition.jpg 2x" /></a></div>
+<div class="articleSummaryTitle"><span class="articleSummaryTitleInner"><a href="/wiki/Portal:_Qur%27an,_Hadith,_and_Scholars" title="Portal: Qur&#39;an, Hadith, and Scholars">Portal: Qur'an, Hadith, and Scholars</a></span></div>
+<div class="articleSummaryText">
+<p>The Qur'an, Hadith, Scripture pages are a special category of pages here at WikiIslam. Rather than being encyclopedia articles, these pages bring together a unique collection of Quranic verses, hadith, sira traditions, tafsir, writings of classical scholars and rulings of contemporary Islamic sheikhs and ulemaa. These pages are organized by theme to assist the student, searcher or researcher.
+</p>
+<div class="articleSummaryExtendedDescription">
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Sections</b></div>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Portal:_Qur%27an,_Hadith,_and_Scholars#The_Islamic_Tradition_Itself" title="Portal: Qur&#39;an, Hadith, and Scholars">The Islamic Tradition</a></li>
+<li><a href="/wiki/Portal:_Qur%27an,_Hadith,_and_Scholars#Muhammad" title="Portal: Qur&#39;an, Hadith, and Scholars">Muhammad</a></li>
+<li><a href="/wiki/Portal:_Qur%27an,_Hadith,_and_Scholars#Women" title="Portal: Qur&#39;an, Hadith, and Scholars">Women</a></li>
+<li><a href="/wiki/Portal:_Qur%27an,_Hadith,_and_Scholars#Jihad" title="Portal: Qur&#39;an, Hadith, and Scholars">Jihad</a></li>
+<li><a href="/wiki/Portal:_Qur%27an,_Hadith,_and_Scholars#Non-Muslims" title="Portal: Qur&#39;an, Hadith, and Scholars">Non-Muslims</a></li>
+<li><a href="/wiki/Portal:_Qur%27an,_Hadith,_and_Scholars#Miscellaneous" title="Portal: Qur&#39;an, Hadith, and Scholars">Miscellaneous</a></li></ul>
+</div>
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Popular Articles</b></div><div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Qur%27an,_Hadith_and_Scholars:Slavery" title="Qur&#39;an, Hadith and Scholars:Slavery">Slavery</a></li>
+<li><a href="/wiki/Qur%27an,_Hadith_and_Scholars:Textual_History_of_the_Qur%27an" title="Qur&#39;an, Hadith and Scholars:Textual History of the Qur&#39;an">Textual History of the Qur'an</a></li>
+<li><a href="/wiki/Qur%27an,_Hadith_and_Scholars:Apostasy" title="Qur&#39;an, Hadith and Scholars:Apostasy">Apostasy</a></li>
+<li><a href="/wiki/Qur%27an,_Hadith_and_Scholars:Stoning" title="Qur&#39;an, Hadith and Scholars:Stoning">Stoning</a></li>
+<li><a href="/wiki/Qur%27an,_Hadith_and_Scholars:Homosexuality" title="Qur&#39;an, Hadith and Scholars:Homosexuality">Homosexuality</a></li>
+<li><a href="/wiki/Qur%27an,_Hadith_and_Scholars:Witchcraft_and_the_Occult" title="Qur&#39;an, Hadith and Scholars:Witchcraft and the Occult">Witchcraft and the Occult</a></li>
+<li><a href="/wiki/Qur%27an,_Hadith_and_Scholars:Dhimma" title="Qur&#39;an, Hadith and Scholars:Dhimma">Dhimma</a></li></ul>
+</div></div>
+</div>
+<div class="articleSummaryEnding"></div>
+</div>
+</div>
+<div class="articleSummary">
+<div class="articleSummaryInner">
+<div class="articleSummaryStar"></div>
+<div class="articleSummaryImage"><a href="/wiki/File:Quran_Mashaf_Comparisons.jpg" class="image"><img alt="Quran Mashaf Comparisons.jpg" src="/wiki/images/thumb/4/49/Quran_Mashaf_Comparisons.jpg/150px-Quran_Mashaf_Comparisons.jpg" decoding="async" width="150" height="111" srcset="/wiki/images/thumb/4/49/Quran_Mashaf_Comparisons.jpg/225px-Quran_Mashaf_Comparisons.jpg 1.5x, /wiki/images/thumb/4/49/Quran_Mashaf_Comparisons.jpg/300px-Quran_Mashaf_Comparisons.jpg 2x" /></a></div>
+<div class="articleSummaryTitle"><span class="articleSummaryTitleInner"><a href="/wiki/Portal:_Islamic_Scriptures" title="Portal: Islamic Scriptures">Portal: Islamic Scriptures</a></span></div>
+<div class="articleSummaryText">
+<p>The idea of scripture is central to Islam; above all else, Islam's own scriptures tell of how Allah has periodically given his followers books throughout the ages, and refers to Islam's co-abrahamic religionists as People of the Book. The central scripture of Islam is above all the Qur'an, which orthodox Sunni and Shi'i Islam see as the literal word of Allah through his messenger Muhammad.
+</p>
+<div class="articleSummaryExtendedDescription">
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Sections</b></div>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Portal:_Islamic_Scriptures#Qur.27an" title="Portal: Islamic Scriptures">Qur'an</a></li>
+<li><a href="/wiki/Portal:_Islamic_Scriptures#Hadith" title="Portal: Islamic Scriptures">Hadith</a></li>
+<li><a href="/wiki/Portal:_Islamic_Scriptures#Sira" title="Portal: Islamic Scriptures">Sira</a></li>
+<li><a href="/wiki/Portal:_Islamic_Scriptures#Tafsir" title="Portal: Islamic Scriptures">Tafsir</a></li></ul>
+</div>
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Popular Articles</b></div><div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Naskh_(Abrogation)" title="Naskh (Abrogation)">Naskh (Abrogation)</a></li>
+<li><a href="/wiki/Sahih_Bukhari" title="Sahih Bukhari">Sahih Bukhari</a></li>
+<li><a href="/wiki/Asbab_al-Nuzul_(Revelational_Circumstances_of_the_Quran)" title="Asbab al-Nuzul (Revelational Circumstances of the Quran)">Asbab al-Nuzul (Revelational Circumstances of the Quran)</a></li>
+<li><a href="/wiki/Contradictions_in_the_Quran" title="Contradictions in the Quran">Contradictions in the Quran</a></li></ul>
+</div></div>
+</div>
+<div class="articleSummaryEnding"></div>
+</div>
+</div>
+<div class="articleSummary">
+<div class="articleSummaryInner">
+<div class="articleSummaryStar"></div>
+<div class="articleSummaryImage"><a href="/wiki/File:Fiqh.jpeg" class="image"><img alt="Fiqh.jpeg" src="/wiki/images/thumb/0/03/Fiqh.jpeg/150px-Fiqh.jpeg" decoding="async" width="150" height="73" srcset="/wiki/images/thumb/0/03/Fiqh.jpeg/225px-Fiqh.jpeg 1.5x, /wiki/images/thumb/0/03/Fiqh.jpeg/300px-Fiqh.jpeg 2x" /></a></div>
+<div class="articleSummaryTitle"><span class="articleSummaryTitleInner"><a href="/wiki/Portal:_Islamic_Law" title="Portal: Islamic Law">Portal: Islamic Law</a></span></div>
+<div class="articleSummaryText">
+<p>Islamic law, or the Shariah, is held to comprise the specific rulings intended by Allah for all of mankind in all times and places and delivered through Islamic scriptures (namely, the Quran and hadith). Fiqh, or Islamic jurisprudence, comprises the legal and interpretive theories through which these rulings are derived from the Quran and hadith. Norms observed and prescribed by Muhammad in these scriptures are, as a rule, taken literally and considered binding.
+</p>
+<div class="articleSummaryExtendedDescription">
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Sections</b></div>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Portal:_Islamic_Law#Theory" title="Portal: Islamic Law">Theory</a></li>
+<li><a href="/wiki/Portal:_Islamic_Law#Women" title="Portal: Islamic Law">Women</a></li>
+<li><a href="/wiki/Portal:_Islamic_Law#Non-Muslims" title="Portal: Islamic Law">Non-Muslims</a></li>
+<li><a href="/wiki/Portal:_Islamic_Law#Crime_and_punishment" title="Portal: Islamic Law">Crime and punishment</a></li>
+<li><a href="/wiki/Portal:_Islamic_Law#Jihad" title="Portal: Islamic Law">Jihad</a></li>
+<li><a href="/wiki/Portal:_Islamic_Law#Ritual" title="Portal: Islamic Law">Ritual</a></li>
+<li><a href="/wiki/Portal:_Islamic_Law#Other_topics_in_Islamic_law" title="Portal: Islamic Law">Other topics in Islamic law</a></li></ul>
+</div>
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Popular Articles</b></div><div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Taqiyya" title="Taqiyya">Taqiyya</a></li>
+<li><a href="/wiki/Dar_al-Harb_and_Dar_al-Islam_(the_Abodes_of_War_and_Peace)" title="Dar al-Harb and Dar al-Islam (the Abodes of War and Peace)">Dar al-Harb and Dar al-Islam (the Abodes of War and Peace)</a></li>
+<li><a href="/wiki/Sex_Segregation_in_Islam" title="Sex Segregation in Islam">Sex Segregation in Islam</a></li>
+<li><a href="/wiki/Islam_and_Apostasy" title="Islam and Apostasy">Islam and Apostasy</a></li>
+<li><a href="/wiki/If_Anyone_Slays_a_Person_(Qur%27an_5:32)" title="If Anyone Slays a Person (Qur&#39;an 5:32)">If Anyone Slays a Person (Qur'an 5:32)</a></li>
+<li><a href="/wiki/Relationships_with_non-Muslims_in_Islamic_Law" title="Relationships with non-Muslims in Islamic Law">Relationships with non-Muslims in Islamic Law</a></li></ul>
+</div></div>
+</div>
+<div class="articleSummaryEnding"></div>
+</div>
+</div>
+<div class="articleSummary">
+<div class="articleSummaryInner">
+<div class="articleSummaryStar"></div>
+<div class="articleSummaryImage"><a href="/wiki/File:Tawheed.jpg" class="image"><img alt="Tawheed.jpg" src="/wiki/images/thumb/6/65/Tawheed.jpg/150px-Tawheed.jpg" decoding="async" width="150" height="150" srcset="/wiki/images/thumb/6/65/Tawheed.jpg/225px-Tawheed.jpg 1.5x, /wiki/images/thumb/6/65/Tawheed.jpg/300px-Tawheed.jpg 2x" /></a></div>
+<div class="articleSummaryTitle"><span class="articleSummaryTitleInner"><a href="/wiki/Portal:_Islamic_Doctrine" title="Portal: Islamic Doctrine">Portal: Islamic Doctrine</a></span></div>
+<div class="articleSummaryText">
+<p>There is much in Islamic scripture that is not of direct legal relevance and which can be understood as constituting doctrine. The Arabic word aqeedah, or creed, has generally been understood to encompass a more limited range of ideas than what, to a modern person, would appear as Islamic doctrine.
+</p>
+<div class="articleSummaryExtendedDescription">
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Sections</b></div>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Portal:_Islamic_Doctrine#God" title="Portal: Islamic Doctrine">God</a></li>
+<li><a href="/wiki/Portal:_Islamic_Doctrine#Other_beings" title="Portal: Islamic Doctrine">Other beings</a></li>
+<li><a href="/wiki/Portal:_Islamic_Doctrine#Earthly_places_and_relics" title="Portal: Islamic Doctrine">Earthly places and relics</a></li>
+<li><a href="/wiki/Portal:_Islamic_Doctrine#Past_and_future_events" title="Portal: Islamic Doctrine">Past and future events</a></li>
+<li><a href="/wiki/Portal:_Islamic_Doctrine#Society_and_human_nature" title="Portal: Islamic Doctrine">Society and human nature</a></li></ul>
+</div>
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Popular Articles</b></div><div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Houri_(Heavenly_Virgin)" title="Houri (Heavenly Virgin)">Houri (Heavenly Virgin)</a></li>
+<li><a href="/wiki/Let_There_be_no_Compulsion_in_Religion" title="Let There be no Compulsion in Religion">Let There be no Compulsion in Religion (Qur'an 2:256)</a></li>
+<li><a href="/wiki/Jinn" title="Jinn">Jinn</a></li>
+<li><a href="/wiki/Black_Stone" title="Black Stone">Black Stone</a></li></ul>
+</div></div>
+</div>
+<div class="articleSummaryEnding"></div>
+</div>
+</div>
+<p><br />
+</p>
+</div><div class="articleSummaryColumn">
+<div class="articleSummary">
+<div class="articleSummaryInner">
+<div class="articleSummaryStar"></div>
+<div class="articleSummaryImage"><a href="/wiki/File:Quran_and_Science.png" class="image"><img alt="Quran and Science.png" src="/wiki/images/thumb/f/ff/Quran_and_Science.png/150px-Quran_and_Science.png" decoding="async" width="150" height="150" srcset="/wiki/images/thumb/f/ff/Quran_and_Science.png/225px-Quran_and_Science.png 1.5x, /wiki/images/thumb/f/ff/Quran_and_Science.png/300px-Quran_and_Science.png 2x" /></a></div>
+<div class="articleSummaryTitle"><span class="articleSummaryTitleInner"><a href="/wiki/Portal:_Islam_and_Science" title="Portal: Islam and Science">Portal: Islam and Science</a></span></div>
+<div class="articleSummaryText">
+<p>Among the many and diverse matters discussed in or touched upon by Islamic scriptures are topics of direct or indirect scientific interest. These topics include reproductive science, embryology, cosmology, and medicine, among others.
+</p>
+<div class="articleSummaryExtendedDescription">
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Sections</b></div>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Portal:_Islam_and_Science#Biology" title="Portal: Islam and Science">Biology</a></li>
+<li><a href="/wiki/Portal:_Islam_and_Science#Cosmology" title="Portal: Islam and Science">Cosmology</a></li>
+<li><a href="/wiki/Portal:_Islam_and_Science#Islamic_practices_and_rituals" title="Portal: Islam and Science">Islamic practices and rituals</a></li>
+<li><a href="/wiki/Portal:_Islam_and_Science#Prominent_figures_and_movements" title="Portal: Islam and Science">Prominent figures and movements</a></li></ul>
+</div>
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Popular Articles</b></div><div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Scientific_Errors_in_the_Quran" title="Scientific Errors in the Quran">Scientific Errors in the Quran</a></li>
+<li><a href="/wiki/The_Islamic_Whale" title="The Islamic Whale">The Islamic Whale</a></li>
+<li><a href="/wiki/Islamic_Views_on_the_Shape_of_the_Earth" title="Islamic Views on the Shape of the Earth">Islamic Views on the Shape of the Earth</a></li>
+<li><a href="/wiki/Embryology_in_the_Qur%27an" class="mw-redirect" title="Embryology in the Qur&#39;an">Embryology in the Qur'an</a></li></ul>
+</div></div>
+</div>
+<div class="articleSummaryEnding"></div>
+</div>
+</div>
+ <div class="articleSummary">
+<div class="articleSummaryInner">
+<div class="articleSummaryStar"></div>
+<div class="articleSummaryImage"><a href="/wiki/File:Muslim-usa.jpg" class="image"><img alt="Muslim-usa.jpg" src="/wiki/images/thumb/7/71/Muslim-usa.jpg/150px-Muslim-usa.jpg" decoding="async" width="150" height="100" srcset="/wiki/images/thumb/7/71/Muslim-usa.jpg/225px-Muslim-usa.jpg 1.5x, /wiki/images/thumb/7/71/Muslim-usa.jpg/300px-Muslim-usa.jpg 2x" /></a></div>
+<div class="articleSummaryTitle"><span class="articleSummaryTitleInner"><a href="/wiki/Portal:_Islam_and_Human_Rights" title="Portal: Islam and Human Rights">Portal: Islam and Human Rights</a></span></div>
+<div class="articleSummaryText">
+<p>The conflict between modern human rights doctrine and Islamic law can, for the most part, be understood as a product of their extreme historical and contextual distance. Whereas Islamic law was formulated in the harsh, unpredictable, and austere environment of 7th-9th century Arabia, modern Human rights doctrine is generally traced back to the European Enlightenment.
+</p>
+<div class="articleSummaryExtendedDescription">
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Sections</b></div>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Portal:_Islam_and_Human_Rights#Women" title="Portal: Islam and Human Rights">Women</a></li>
+<li><a href="/wiki/Portal:_Islam_and_Human_Rights#Religious_Minorities" title="Portal: Islam and Human Rights">Religious Minorities</a></li>
+<li><a href="/wiki/Portal:_Islam_and_Human_Rights#Freedom_of_Conscience" title="Portal: Islam and Human Rights">Freedom of Conscience</a></li>
+<li><a href="/wiki/Portal:_Islam_and_Human_Rights#Corporal_punishment" title="Portal: Islam and Human Rights">Corporal punishment</a></li>
+<li><a href="/wiki/Portal:_Islam_and_Human_Rights#Modern_movements_and_events" title="Portal: Islam and Human Rights">Modern movements and events</a></li></ul></div>
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Popular Articles</b></div><div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Islam_and_Women" title="Islam and Women">Islam and Women</a></li>
+<li><a href="/wiki/Hijab#Revelation_of_the_Hijab_Verses" title="Hijab">Revelation of the Hijab Verses</a></li>
+<li><a href="/wiki/Rape_in_Islamic_Law" title="Rape in Islamic Law">Rape in Islamic Law</a></li>
+<li><a href="/wiki/Child_Marriage_in_Islamic_Law" title="Child Marriage in Islamic Law">Child Marriage in Islamic Law</a></li></ul>
+</div></div>
+</div>
+<div class="articleSummaryEnding"></div>
+</div>
+</div>
+<div class="articleSummary">
+<div class="articleSummaryInner">
+<div class="articleSummaryStar"></div>
+<div class="articleSummaryImage"><a href="/wiki/File:Maome.jpeg" class="image"><img alt="Maome.jpeg" src="/wiki/images/thumb/1/17/Maome.jpeg/150px-Maome.jpeg" decoding="async" width="150" height="90" srcset="/wiki/images/thumb/1/17/Maome.jpeg/225px-Maome.jpeg 1.5x, /wiki/images/thumb/1/17/Maome.jpeg/300px-Maome.jpeg 2x" /></a></div>
+<div class="articleSummaryTitle"><span class="articleSummaryTitleInner"><a href="/wiki/Portal:_Muhammad" title="Portal: Muhammad">Portal: Muhammad</a></span></div>
+<div class="articleSummaryText">
+<p>Muhammad, the founder of Islam, is one of the most vigorously revered men to have ever lived. His legacy has meant many different things to many different people throughout history. Information on his life comes almost exclusively through oral reports (hadiths) compiled, for the most part, more than a hundred and fifty years after his death.
+</p>
+<div class="articleSummaryExtendedDescription">
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Sections</b></div>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Portal:_Muhammad#Personal_life" title="Portal: Muhammad">Personal life</a></li>
+<li><a href="/wiki/Portal:_Muhammad#Military_life" title="Portal: Muhammad">Military life</a></li>
+<li><a href="/wiki/Portal:_Muhammad#Religious_life" title="Portal: Muhammad">Religious life</a></li>
+<li><a href="/wiki/Portal:_Muhammad#In_doctrine" title="Portal: Muhammad">In doctrine</a></li>
+<li><a href="/wiki/Portal:_Muhammad#In_history" title="Portal: Muhammad">In history</a></li>
+<li><a href="/wiki/Portal:_Muhammad#In_recent_times" title="Portal: Muhammad">In recent times</a></li></ul>
+</div>
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Popular Articles</b></div><div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Muhammad_ibn_Abdullah" title="Muhammad ibn Abdullah">Muhammad ibn Abdullah</a></li>
+<li><a href="/wiki/Satanic_Verses_(Gharaniq_Incident)" title="Satanic Verses (Gharaniq Incident)">Satanic Verses (Gharaniq Incident)</a></li>
+<li><a href="/wiki/List_of_Killings_Ordered_or_Supported_by_Muhammad" title="List of Killings Ordered or Supported by Muhammad">List of Killings Ordered or Supported by Muhammad</a></li>
+<li><a href="/wiki/Prophecies_in_the_Hadith" title="Prophecies in the Hadith">Prophecies in the Hadith</a></li></ul>
+</div></div>
+</div>
+<div class="articleSummaryEnding"></div>
+</div>
+</div>
+<div class="articleSummary">
+<div class="articleSummaryInner">
+<div class="articleSummaryStar"></div>
+<div class="articleSummaryImage"><a href="/wiki/File:Aisha.png" class="image"><img alt="Aisha.png" src="/wiki/images/thumb/e/e8/Aisha.png/150px-Aisha.png" decoding="async" width="150" height="146" srcset="/wiki/images/thumb/e/e8/Aisha.png/225px-Aisha.png 1.5x, /wiki/images/thumb/e/e8/Aisha.png/300px-Aisha.png 2x" /></a></div>
+<div class="articleSummaryTitle"><span class="articleSummaryTitleInner"><a href="/wiki/Portal:_Muhammad%E2%80%99s_Wives_and_Consorts" title="Portal: Muhammad’s Wives and Consorts">Portal: Muhammad’s Wives and Consorts</a></span></div>
+<div class="articleSummaryText">
+<p>The wives of the prophet are described as "أمهات المؤمنين" or "mothers of the believers." As such the prophetic example is considered instructive for all Muslim households. How the prophet interacted with his wives, and how they obeyed him, is a framework for how Muslim husbands and wives ought to interact, as well as how men should interact with their own female slaves.
+</p>
+<div class="articleSummaryExtendedDescription">
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Sections</b></div>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Portal:_Muhammad%E2%80%99s_Wives_and_Consorts#Aisha" title="Portal: Muhammad’s Wives and Consorts">Aisha</a></li>
+<li><a href="/wiki/Portal:_Muhammad%E2%80%99s_Wives_and_Consorts#Muhammad.27s_Other_Wives_and_Consorts" title="Portal: Muhammad’s Wives and Consorts">Muhammad's Other Wives and Consorts</a></li></ul>
+</div>
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Popular Articles</b></div><div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Ages_of_Muhammads_Wives_at_Marriage" title="Ages of Muhammads Wives at Marriage">Ages of Muhammad's Wives at Marriage</a></li>
+<li><a href="/wiki/Aisha" class="mw-redirect" title="Aisha">Aisha</a></li>
+<li><a href="/wiki/Safiyah" title="Safiyah">Safiyah</a></li></ul>
+</div></div>
+</div>
+<div class="articleSummaryEnding"></div>
+</div>
+</div>
+<div class="articleSummary">
+<div class="articleSummaryInner">
+<div class="articleSummaryStar"></div>
+<div class="articleSummaryImage"><a href="/wiki/File:Sahabah.png" class="image"><img alt="Sahabah.png" src="/wiki/images/thumb/a/af/Sahabah.png/150px-Sahabah.png" decoding="async" width="150" height="148" srcset="/wiki/images/thumb/a/af/Sahabah.png/225px-Sahabah.png 1.5x, /wiki/images/thumb/a/af/Sahabah.png/300px-Sahabah.png 2x" /></a></div>
+<div class="articleSummaryTitle"><span class="articleSummaryTitleInner"><a href="/wiki/Portal:_Muhammad%27s_Companions_and_Contemporaries" title="Portal: Muhammad&#39;s Companions and Contemporaries">Portal: Muhammad's Companions and Contemporaries</a></span></div>
+<div class="articleSummaryText">
+<p>Muhammad's contemporaries, companions, and successors play an elevated role in the lore of Islam. It is against many of his contemporaries that Muhammad defined his movement, it is through his companions that his tradition was passed forth, and it is by his immediate successors that his legacy was interpreted and formalized.
+</p>
+<div class="articleSummaryExtendedDescription">
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Sections</b></div>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Portal:_Muhammad%27s_Companions_and_Contemporaries#Male_companions" title="Portal: Muhammad&#39;s Companions and Contemporaries">Male companions</a></li>
+<li><a href="/wiki/Portal:_Muhammad%27s_Companions_and_Contemporaries#Female_companions" title="Portal: Muhammad&#39;s Companions and Contemporaries">Female companions</a></li>
+<li><a href="/wiki/Portal:_Muhammad%27s_Companions_and_Contemporaries#Opponents" title="Portal: Muhammad&#39;s Companions and Contemporaries">Opponents</a></li>
+<li><a href="/wiki/Portal:_Muhammad%27s_Companions_and_Contemporaries#Others" title="Portal: Muhammad&#39;s Companions and Contemporaries">Others</a></li></ul>
+<p><br />
+</p>
+</div>
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Popular Articles</b></div><div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Khadijah_bint_Khuwaylid" title="Khadijah bint Khuwaylid">Khadijah bint Khuwaylid</a></li>
+<li><a href="/wiki/Abdullah_ibn_Abd_al-Muttalib" title="Abdullah ibn Abd al-Muttalib">Abdullah ibn Abd al-Muttalib</a></li>
+<li><a href="/wiki/Ali_ibn_Abi_Talib" title="Ali ibn Abi Talib">Ali ibn Abi Talib</a></li>
+<li><a href="/wiki/Umm_Qirfa" title="Umm Qirfa">Umm Qirfa</a></li></ul>
+</div></div>
+</div>
+<div class="articleSummaryEnding"></div>
+</div>
+</div>
+<div class="articleSummary">
+<div class="articleSummaryInner">
+<div class="articleSummaryStar"></div>
+<div class="articleSummaryImage"><a href="/wiki/File:Mary_In_the_Quran.PNG" class="image"><img alt="Mary In the Quran.PNG" src="/wiki/images/thumb/6/62/Mary_In_the_Quran.PNG/150px-Mary_In_the_Quran.PNG" decoding="async" width="150" height="199" srcset="/wiki/images/thumb/6/62/Mary_In_the_Quran.PNG/225px-Mary_In_the_Quran.PNG 1.5x, /wiki/images/6/62/Mary_In_the_Quran.PNG 2x" /></a></div>
+<div class="articleSummaryTitle"><span class="articleSummaryTitleInner"><a href="/wiki/Portal:_Islam_and_the_Judeo-Christian_Tradition" title="Portal: Islam and the Judeo-Christian Tradition">Portal: Islam and the Judeo-Christian Tradition</a></span></div>
+<div class="articleSummaryText">
+<p>The Qur'an and Sunnah make constant reference to stories from the Judeao-Christian tradition. The audience for the Qur’an was clearly well-acquainted with these stories and the Qur'an itself says that it is a "reminder" (73:19) of the message which came before. The stories referenced are not only from the Bible, but come from a wide variety of literary traditions from within ancient near east Christianity and Judaism.
+</p>
+<div class="articleSummaryExtendedDescription">
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Sections</b></div>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Portal:_Islam_and_the_Judeo-Christian_Tradition#Islam_and_the_Hebrew_Bible_Tradition" title="Portal: Islam and the Judeo-Christian Tradition">Islam and the Hebrew Bible Tradition</a></li>
+<li><a href="/wiki/Portal:_Islam_and_the_Judeo-Christian_Tradition#Islam_and_the_Christian_Scriptural_Tradition" title="Portal: Islam and the Judeo-Christian Tradition">Islam and the Christian Scriptural Tradition</a></li>
+<li><a href="/wiki/Portal:_Islam_and_the_Judeo-Christian_Tradition#Islam_and_extra-biblical_Stories_from_the_Jewish_and_Christian_Traditions" title="Portal: Islam and the Judeo-Christian Tradition">Islam and extra-biblical Stories from the Jewish and Christian Traditions</a></li></ul>
+</div>
+<div style="padding: 4px;padding-left: 8px; padding-right: 8px;background: #283763; border: 1px solid #DEB330; color:#ffffff; font-size: 1.2em;"><b>Popular Articles</b></div><div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+<ul><li><a href="/wiki/Seven_Sleepers_of_Ephesus_in_the_Quran" title="Seven Sleepers of Ephesus in the Quran">Seven Sleepers of Ephesus in the Quran</a></li>
+<li><a href="/wiki/Mary,_Sister_of_Aaron" title="Mary, Sister of Aaron">Mary, Sister of Aaron</a></li>
+<li><a href="/wiki/Virgin_Conception_of_Jesus_in_the_Qur%27an" title="Virgin Conception of Jesus in the Qur&#39;an">Virgin Conception of Jesus in the Qur'an</a></li>
+<li><a href="/wiki/Dhul-Qarnayn_and_the_Alexander_Romance" title="Dhul-Qarnayn and the Alexander Romance">Dhul-Qarnayn and the Alexander Romance</a></li>
+<li><a href="/wiki/Lut" title="Lut">Lut</a></li></ul>
+</div></div>
+</div>
+<div class="articleSummaryEnding"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="divTable" style="border-spacing: 4px;">
+   <div class="divTableBody">
+      <div class="divTableRow">
+         <div class="divTableCell" style="background: #FAF4E1; border: 3px solid #DEB330;">
+            <div class="divTable">
+               <div class="divTableBody">
+                  <div class="divTableRow">
+                     <div class="divTableHead">
+                        <div style="margin: 0; background: #DEB330; font-size: 120%; font-weight: bold; border: 1px solid #a3bfb1; text-align: left; color: #fff; padding: 0.2em 0.4em;">Featured Articles</div>
+                     </div>
+                  </div>
+                  <div class="divTableRow">
+                     <div class="divTableCell">
+<ul><li><a href="/wiki/Mary,_Sister_of_Aaron" title="Mary, Sister of Aaron">Mary, Sister of Aaron</a></li>
+<li><a href="/wiki/If_Anyone_Slays_a_Person_(Qur%27an_5:32)" title="If Anyone Slays a Person (Qur&#39;an 5:32)">If Anyone Slays a Person (Qur'an 5:32)</a></li>
+<li><a href="/wiki/Sources_of_Islamic_Theories_of_Reproduction" title="Sources of Islamic Theories of Reproduction">Sources of Islamic Theories of Reproduction</a></li>
+<li><a href="/wiki/Dihya_the_Berber_Queen_(Al-Kaahina)" title="Dihya the Berber Queen (Al-Kaahina)">Dihya the Berber Queen (Al-Kaahina)</a></li>
+<li><a href="/wiki/The_Genocide_of_Banu_Qurayza" class="mw-redirect" title="The Genocide of Banu Qurayza">The Genocide of Banu Qurayza</a></li>
+<li><a href="/wiki/Isa_al-Masih_(Jesus_Christ)" title="Isa al-Masih (Jesus Christ)">Isa al-Masih (Jesus Christ)</a></li>
+<li><a href="/wiki/Shaheed_(Martyr)" title="Shaheed (Martyr)">Shaheed (Martyr)</a></li>
+<li><a href="/wiki/Sahih_Bukhari" title="Sahih Bukhari">Sahih Bukhari</a></li>
+<li><a href="/wiki/Zakat_(Tax)" title="Zakat (Tax)">Zakat (Tax)</a></li>
+<li><a href="/wiki/Taqiyya" title="Taqiyya">Taqiyya</a></li></ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="divTableCell" style="margin: 10px;background: #EAEBF0; border: 3px solid #283763;">
+            <div class="divTable">
+               <div class="divTableBody">
+                  <div class="divTableRow">
+                     <div class="divTableHead">
+                        <div style="margin: 0; background: #283763; font-size: 120%; font-weight: bold; border: 1px solid #a3b0bf; text-align: left; color: #fff; padding: 0.2em 0.4em;">About WikiIslam</div>
+                     </div>
+                  </div>
+                  <div class="divTableRow">
+                     <div class="divTableCell">
+<ul><li><a href="/wiki/WikiIslam:About" class="mw-redirect" title="WikiIslam:About">About</a></li>
+<li><a href="/wiki/WikiIslam:Policies_and_Guidelines" title="WikiIslam:Policies and Guidelines">Policies and Guidelines</a></li>
+<li><a href="/wiki/WikiIslam:Frequently_Asked_Questions" title="WikiIslam:Frequently Asked Questions">Frequently Asked Questions</a></li></ul>
+                     </div>
+                  </div>
+                  <div class="divTableRow">
+                     <div class="divTableHead">
+                        <div style="margin: 0; background: #283763; font-size: 120%; font-weight: bold; border: 1px solid #a3b0bf; text-align: left; color: #fff; padding: 0.2em 0.4em;">Other Resources</div>
+                     </div>
+                  </div>
+                  <div class="divTableRow">
+                     <div class="divTableCell">
+<ul><li><a rel="nofollow" class="external text" href="https://persecution.exmuslims.org">EXMNA's Persecution Tracker</a></li>
+<li><a rel="nofollow" class="external text" href="https://reddit.com/r/exmuslim">Reddit's Ex-Muslim Discussion group</a></li>
+<li><a rel="nofollow" class="external text" href="https://ExMuslims.Org">Ex-Muslims of North America</a></li>
+<li><a rel="nofollow" class="external text" href="https://quranx.com">QuranX</a></li>
+<li><a rel="nofollow" class="external text" href="https://sunnah.one">Hadith search engine (Arabic)</a></li>
+<li><a rel="nofollow" class="external text" href="https://tafsir.app">Tafsir search engine (Arabic)</a></li>
+<li><a rel="nofollow" class="external text" href="https://al-maktaba.org/">Islamic texts library (Arabic) </a></li>
+<li><a rel="nofollow" class="external text" href="http://ejtaal.net/aa/#hw4=h14,ll=h38,ls=h1,la=h1,sg=h20,ha=h21,br=h26,pr=h9,aan=h24,mgf=h33,vi=h51,kz=h10,mr=h25,mn=h1,uqw=h106,umr=h26,ums=h14,umj=h34,ulq=h247,uqa=h17,uqq=h2,bdw=h19,amr=h7,asb=h17,auh=h37,dhq=h2,mht=h6,msb=h8,tla=h8,amj=h22,ens=h1,mis=h1">Arabic dictionaries</a></li></ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<table style="border-spacing:6px;margin:-4px -4px; width:100%">
+<tbody><tr>
+<td class="PictureBG1" style="width:100%;border:1px solid #48494B;background-color:#faf5ff;vertical-align:top;color:#000">
+<table cellpadding="2" cellspacing="2" style="vertical-align:top;background-color:#d9dddc;color:#000; width:100%">
+<tbody><tr>
+<th><div style="margin:0;background-color:#48494B;font-size:120%;font-weight:bold;border:1px solid #afa3bf;text-align:left;color:#fff;padding:0.2em 0.4em;">Islamic Views on the Shape of the Earth</div>
+</th></tr>
+<tr>
+<td>
+<table style="border-spacing:2px;margin:-2px -2px; width:100%;background-color:#d9dddc">
+
+<tbody><tr>
+<td class="PictureMainBG2" style="width:5%; vertical-align:top">
+<p><a href="/wiki/TIslamic_Views_on_the_Shape_of_the_Earth" title="TIslamic Views on the Shape of the Earth"><img alt="Flat Earth The Wonders of Creation.jpg" src="/wiki/images/thumb/f/f0/Flat_Earth_The_Wonders_of_Creation.jpg/165px-Flat_Earth_The_Wonders_of_Creation.jpg" decoding="async" width="165" height="294" srcset="/wiki/images/f/f0/Flat_Earth_The_Wonders_of_Creation.jpg 1.5x" /></a>
+</p>
+</td>
+<td class="PictureMainBG2" style="width:2%; vertical-align:top">
+</td>
+<td class="PictureMain" style="width:93%; vertical-align:top">
+<p>Islamic scriptures imply, adhere to, and describe a flat-Earth cosmography (arranged in a geocentric system) which conceives of the earth as existing in the form of a large plane or disk. While some early Islamic authorities maintained that the earth existed in the shape of a "ball", such notions are entirely absent in the earliest Islamic scriptures.
+</p><p>Nonetheless, as knowledge of the Earth's spherical form has existed to greater or lesser degree since at least classical Greek (4th Century BCE), it has been frequently argued in recent times that the early scholars of Islam, the first followers of Muhammad, and indeed Islamic scripture itself supported the spherical-earth model, although evidence for these claims is lacking.  (<a href="/wiki/Islamic_Views_on_the_Shape_of_the_Earth" title="Islamic Views on the Shape of the Earth"><i>read more</i></a>) 
+</p>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<p><br /> 
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220505183913
+Cache expiry: 3600
+Dynamic content: true
+Complications: []
+CPU time usage: 0.128 seconds
+Real time usage: 0.137 seconds
+Preprocessor visited node count: 399/1000000
+Post‐expand include size: 23024/4194304 bytes
+Template argument size: 17467/4194304 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2038/5000000 bytes
+ExtLoops count: 0
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   22.587      1 -total
+ 81.13%   18.324      1 Template:Pictorial-Islam-options
+ 20.13%    4.546      1 Template:Pictorial-Islam
+ 14.37%    3.245     12 Template:PortalArticle
+-->
+
+<!-- Saved in parser cache with key wikiislam-mw_:pcache:idhash:14804-0!canonical and timestamp 20220505183913 and revision id 135208
+ -->
+</div></div><div class="printfooter">Retrieved from "<a dir="ltr" href="http://wikiislam.net/index.php?title=Main_Page&amp;oldid=135208">http://wikiislam.net/index.php?title=Main_Page&amp;oldid=135208</a>"</div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=Main+Page" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Main_Page" title="View the content page [c]" accesskey="c">Main page</a></li><li id="ca-talk"><a href="/wiki/Talk:Main_Page" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-view" class="collapsible selected"><a href="/wiki/Main_Page">Read</a></li><li id="ca-viewsource" class="collapsible"><a href="/index.php?title=Main_Page&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li id="ca-history" class="collapsible"><a href="/index.php?title=Main_Page&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search WikiIslam" title="Search WikiIslam [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Navigation" class="vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-Navigation-label" role="navigation" 
+	 >
+	<h3 id="p-Navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Main-Page"><a href="/wiki/Main_Page">Main Page</a></li><li id="n-Donate"><a href="https://exmuslims.org/donate" rel="nofollow">Donate</a></li><li id="n-Site-Map"><a href="/wiki/WikiIslam:Site_Map">Site Map</a></li><li id="n-New-Articles"><a href="/wiki/Special:NewPages">New Articles</a></li><li id="n-Random-Article"><a href="/wiki/Special:Random">Random Article</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-About" class="vector-menu vector-menu-portal portal" aria-labelledby="p-About-label" role="navigation" 
+	 >
+	<h3 id="p-About-label">
+		<span>About</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-About-WikiIslam"><a href="/wiki/WikiIslam">About WikiIslam</a></li><li id="n-Renovations"><a href="/wiki/WikiIslam:Renovations">Renovations</a></li><li id="n-Contact-Us"><a href="/wiki/WikiIslam:Contact_Us">Contact Us</a></li><li id="n-FAQ"><a href="/wiki/WikiIslam:Frequently_Asked_Questions">FAQ</a></li><li id="n-Meet-the-Editors"><a href="/wiki/WikiIslam:Meet_the_Editors">Meet the Editors</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Policies" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Policies-label" role="navigation" 
+	 >
+	<h3 id="p-Policies-label">
+		<span>Policies</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Policies-overview"><a href="/wiki/WikiIslam:Policies_and_Guidelines">Policies overview</a></li><li id="n-Article-score-rubric"><a href="/wiki/Template:QualityScore">Article score rubric</a></li><li id="n-Report"><a href="/cdn-cgi/l/email-protection#4b2a2f2622250b3c2220222238272a2665252e3f" rel="nofollow">Report</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Contribute " class="vector-menu vector-menu-portal portal" aria-labelledby="p-Contribute -label" role="navigation" 
+	 >
+	<h3 id="p-Contribute -label">
+		<span>Contribute </span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Join-the-Team"><a href="/wiki/WikiIslam:Join_the_Team">Join the Team</a></li><li id="n-Become-a-Translator"><a href="/wiki/WikiIslam:Instructions_for_Translators">Become a Translator</a></li><li id="n-New-Contributors"><a href="/wiki/WikiIslam:Message_to_New_Users">New Contributors</a></li><li id="n-Page-Scores"><a href="/wiki/Page_Scores">Page Scores</a></li><li id="n-Flagged-Articles"><a href="/wiki/Category:Flagged_Pages">Flagged Articles</a></li><li id="n-Recent-Edits"><a href="/wiki/Special:RecentChanges">Recent Edits</a></li><li id="n-Editing-Help"><a href="/wiki/Help:Contents">Editing Help</a></li><li id="n-Discussions"><a href="/wiki/WikiIslam:Discussions">Discussions</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Portals" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Portals-label" role="navigation" 
+	 >
+	<h3 id="p-Portals-label">
+		<span>Portals</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Early-History"><a href="/wiki/Portal:_Early_Islamic_History">Early History</a></li><li id="n-Origins"><a href="/wiki/Portal:_Origins_of_Islam">Origins</a></li><li id="n-Q.H.S."><a href="/wiki/Portal:_Qur%27an,_Hadith,_and_Scholars">Q.H.S.</a></li><li id="n-Doctrine"><a href="/wiki/Portal:_Islamic_Doctrine">Doctrine</a></li><li id="n-Law"><a href="/wiki/Portal:_Islamic_Law">Law</a></li><li id="n-Scriptures"><a href="/wiki/Portal:_Islamic_Scriptures">Scriptures</a></li><li id="n-Traditional-Scholars"><a href="/wiki/Portal:_Traditional_Islamic_Scholars">Traditional Scholars</a></li><li id="n-Modern-Movements"><a href="/wiki/Portal:_Modern_Movements_in_Islam">Modern Movements</a></li><li id="n-Science"><a href="/wiki/Portal:_Islam_and_Science">Science</a></li><li id="n-Human-Rights"><a href="/wiki/Portal:_Islam_and_Human_Rights">Human Rights</a></li><li id="n-Muhammad"><a href="/wiki/Portal:_Muhammad">Muhammad</a></li><li id="n-Wives-and-Consorts"><a href="/wiki/Portal:_Muhammad%E2%80%99s_Wives_and_Consorts">Wives and Consorts</a></li><li id="n-Companions"><a href="/wiki/Portal:_Muhammad%27s_Companions_and_Contemporaries">Companions</a></li><li id="n-Judeo-Christian-Tradition"><a href="/wiki/Portal:_Islam_and_the_Judeo-Christian_Tradition">Judeo-Christian Tradition</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Translations" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Translations-label" role="navigation" 
+	 >
+	<h3 id="p-Translations-label">
+		<span>Translations</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Az.C9.99rbaycanca"><a href="/wiki/Az%C9%99rbaycanca_Yaz%C4%B1lar_-_Articles_in_Azerbaijani">Azərbaycanca</a></li><li id="n-.D0.91.D1.8A.D0.BB.D0.B3.D0.B0.D1.80.D1.81.D0.BA.D0.B8"><a href="http://bg.wikiislam.net/wiki/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BD%D0%B0_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">Български</a></li><li id="n-.C4.8Cesky"><a href="/wiki/Clanky_v_ceskem_jazyce_-_Articles_in_Czech">Česky</a></li><li id="n-Deutsch"><a href="/wiki/Artikel_auf_Deutsch_-_Articles_in_German">Deutsch</a></li><li id="n-Espa.C3.B1ol"><a href="/wiki/Art%C3%ADculos_en_espa%C3%B1ol_-_Articles_in_Spanish">Español</a></li><li id="n-Fran.C3.A7ais"><a href="/wiki/Les_articles_en_francais_-_Articles_in_French">Français</a></li><li id="n-Italiano"><a href="/wiki/Articoli_in_Italiano_-_Articles_in_Italian">Italiano</a></li><li id="n-O.27zbekcha"><a href="/wiki/Ozbekcha_maqolalar_-_Articles_in_Uzbek">O'zbekcha</a></li><li id="n-.D0.A0.D1.83.D1.81.D1.81.D0.BA.D0.B8.D0.B9"><a href="http://ru.wikiislam.net/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">Русский</a></li><li id="n-T.C3.BCrk.C3.A7e"><a href="/wiki/Turkce_Makaleler_-_Articles_in_Turkish">Türkçe</a></li><li id="n-Complete-List"><a href="/wiki/Category:Other_Languages">Complete List</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Main_Page" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Main_Page" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/index.php?title=Main_Page&amp;oldid=135208" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/index.php?title=Main_Page&amp;action=info" title="More information about this page">Page information</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+		<li id="footer-info-lastmod"> This page was last edited on 12 April 2022, at 11:37.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0</a> License</li>
+	</ul>
+	<ul id="footer-places" >
+		<li id="footer-places-privacy"><a href="/wiki/WikiIslam:Privacy_policy" class="mw-redirect" title="WikiIslam:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/WikiIslam" title="WikiIslam">About WikiIslam</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/WikiIslam:General_disclaimer" title="WikiIslam:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-test1"><A href="https://exmuslims.org/donate">Donate</a></li>
+		<li id="footer-places-test2">Registered 501(c)(3). EIN: 46-4333040</li>
+		<li id="footer-places-mobileview"><a href="//wikiislam.net/index.php?title=Main_Page&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="http://creativecommons.org/licenses/by-nc/3.0/"><img src="/resources/assets/licenses/cc-by-nc-sa.png" alt="Creative Commons Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)" width="88" height="31" loading="lazy"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</footer>
+
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.128","walltime":"0.137","ppvisitednodes":{"value":399,"limit":1000000},"postexpandincludesize":{"value":23024,"limit":4194304},"templateargumentsize":{"value":17467,"limit":4194304},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2038,"limit":5000000},"timingprofile":["100.00%   22.587      1 -total"," 81.13%   18.324      1 Template:Pictorial-Islam-options"," 20.13%    4.546      1 Template:Pictorial-Islam"," 14.37%    3.245     12 Template:PortalArticle"]},"loops":{"limitreport-count-unlimited":[0]},"cachereport":{"timestamp":"20220505183913","ttl":3600,"transientcontent":true}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71311637-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":300});});</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"5ad59a95e8","applicationID":"190660362","transactionName":"M1UHbEJRDERWUxEIWwofJFtEWQ1ZGFEGFV0LXkpOWVUV","queueTime":0,"applicationTime":401,"atts":"HxIEGgpLH0o=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body></html>

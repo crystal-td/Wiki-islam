@@ -1,0 +1,1 @@
+{"curonly": false, "date": "20220505", "api": "https://wikiislam.net/api.php", "failfast": false, "http_method": "POST", "index": "https://wikiislam.net/index.php", "images": false, "logs": false, "xml": true, "xmlrevisions": false, "namespaces": ["all"], "exnamespaces": [], "path": "./wikiislamnet-20220505-wikidump", "cookies": "", "delay": 0, "retries": 5}
